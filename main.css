@@ -53,11 +53,12 @@ img {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+
 .email-icon {
   color: white;
   background-color: red;
   font-size: 24px;
-  padding: 14px 16px;
+  padding: 16px;
   border-radius: 50%;
   margin-right: 12px;
 }
@@ -66,7 +67,7 @@ img {
   color: white;
   background-color: blue;
   font-size: 24px;
-  padding: 14px 18px;
+  padding: 16px;
   border-radius: 50%;
   margin-left: 12px;
   animation: pulse 2s infinite alternate;
@@ -75,6 +76,10 @@ img {
 .icon-link:hover {
   color: black;
   /* animation: pulse 2s infinite alternate; */
+}
+
+.let{
+    margin-bottom: 24px;
 }
 
 ol {
@@ -247,6 +252,14 @@ footer {
 
   li:hover {
     transform: scale(1.1);
+  }
+
+  .email-icon {
+    padding: 14px 16px;
+  }
+  
+  .linkedIn-icon {
+    padding: 16px 18px;
   }
 
   .skills-list {
