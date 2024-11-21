@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Personal Profile Page of Shalu" />
+    <title>Shalu's Profile</title>
+    <link rel="icon" href="assets\trophy.png" type="image/x-icon" />
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <center>
+      <section class="top-welcome">
+        <h1>This is Shalu, a <span class="about-me"></span></h1>
+        <p>Welcome to my world !</p>
+      </section>
+      <hr />
+
+      <section>
+        <h2>About Me</h2>
+        <p>Hello I'm Shalu, and here is a little info about me.</p>
+        <img src="assets\img\shalu-pic.webp" alt="Shalu's Pic" width="300" />
+      </section>
+      <hr />
+
+      <section>
+        <h2>Contact Information</h2>
+        <p>Let's Connect</p>
+        <p>
+          <a
+            href="mailto:shaludducollege@gmail.com"
+            class="icon-link email-icon"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+          <a href="#" class="icon-link linkedIn-icon"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </p>
+      </section>
+      <hr />
+
+      <section>
+        <h2>My Skills</h2>
+        <div class="skills-list">
+          <ol class="skills-list">
+            <li>Web Development</li>
+            <li>Graphic Design</li>
+            <li>Animation</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="horizontal-scroll">
+        <div class="icon-container">
+          <img
+            src="https://api.iconify.design/skill-icons:html.svg"
+            alt="HTML-ICON"
+          />
+          <img
+            src="https://api.iconify.design/skill-icons:css.svg"
+            alt="CSS-ICON"
+          />
+          <img
+            src="https://api.iconify.design/skill-icons:javascript.svg"
+            alt="JAVASCRIPT-ICON"
+          />
+          <img
+            src="https://api.iconify.design/skill-icons:react-dark.svg"
+            alt="REACT-ICON"
+          />
+          <img
+            src="https://api.iconify.design/skill-icons:mongodb.svg"
+            alt="MONGODB-ICON"
+          />
+          <img
+            src="https://api.iconify.design/skill-icons:nodejs-dark.svg"
+            alt="NODEJS-ICON"
+          />
+          <img
+            src="https://api.iconify.design/skill-icons:expressjs-dark.svg"
+            alt="EXPRESS-ICON"
+          />
+          <img
+            src="https://api.iconify.design/skill-icons:bootstrap.svg"
+            alt="BOOTSTRAP-ICON"
+          />
+          <img
+            src="https://api.iconify.design/skill-icons:tailwindcss-dark.svg"
+            alt="TAILWIND-ICON"
+          />
+        </div>
+      </section>
+      <hr />
+
+      <section>
+        <h2>Portfolio</h2>
+        <p>Take a look at some of my works.</p>
+        <p><a href="project1.html">Project1</a> | <a href="#">Project2</a></p>
+      </section>
+      <hr />
+
+      <section>
+        <h2>Contact Us</h2>
+        <form action="#" method="POST" class="form-container">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required />
+            <small>Enter your full name</small>
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required />
+            <small>We'll never share your email</small>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </section>
+
+      <footer>
+        <p>&copy; 2024 Shalu. Built by Shalu Yadav.</p>
+      </footer>
+    </center>
+  </body>
+
+  <script src="script.js"></script>
+</html>
