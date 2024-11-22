@@ -94,6 +94,8 @@ li {
   padding: 8px 32px;
   border-radius: 4px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background: white;
+  color: black;
 }
 
 li:hover {
@@ -109,12 +111,11 @@ li:hover {
 }
 
 /*-------------------------form styling------------------*/
-
 .form-container {
   width: 100%;
   max-width: 400px;
   margin: 50px auto;
-  background-color: #fff;
+  background: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -122,11 +123,6 @@ li:hover {
 
 .form-group {
   margin-bottom: 20px;
-}
-
-label {
-  display: block;
-  margin-bottom: 8px;
 }
 
 input[type="text"],
@@ -174,10 +170,34 @@ textarea {
 /*---------------------------footer----------------------*/
 
 footer {
+  display: flex;
   height: 96px;
   background: linear-gradient(to right, purple, rgb(239, 87, 5));
-  align-content: center;
+  align-items: center;
+  justify-content: center;
   color: white;
+}
+
+/*--------------------------------Mode Change------------------------*/
+.dark-mode-toggle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+}
+
+.dark-mode{
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode button{
+  background-color: #555;
+  color: #fff;
+}
+
+.dark-mode p{
+  color: #fff;
 }
 
 /*-------------------------Animation Keyframes------------------*/
@@ -243,7 +263,6 @@ footer {
     margin: 0;
     padding: 0;
     text-align: center;
-    width: 75%;
   }
 
   li{
