@@ -1,5 +1,5 @@
 body{
-    margin: 0 5%;
+    margin: 0 5% 4% 5%;
     padding: 0;
     box-sizing: border-box;
 }
@@ -11,4 +11,26 @@ h1{
 
 p{
     text-align: justify;
+}
+
+#video-para{
+    text-align: center;
+}
+
+button img{
+    width: 24px;
+}
+
+button{
+    padding: 4px 16px;
+    margin: 8px;
+    border: none;
+    background: #037E89;
+    border-radius: 8px;
+}
+
+button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    border: 1.5px solid black;
 }
