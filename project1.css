@@ -1,0 +1,14 @@
+body{
+    margin: 0 5%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    background-color: #037E89; 
+    color: black;
+}
+
+p{
+    text-align: justify;
+}
