@@ -9,6 +9,11 @@ h1{
     color: black;
 }
 
+h5{
+    color: red;
+    font-weight: 600;
+}
+
 p{
     text-align: justify;
 }
