@@ -1,3 +1,5 @@
+/*------------------Typing Text----------------------*/
+
 function changeAboutMeText() {
   const aboutMeTexts = [
     "Tech Enthusiast",
@@ -20,20 +22,18 @@ function changeAboutMeText() {
       aboutMeElement.textContent += currentText[charIndex];
       charIndex++;
       setTimeout(type, typingSpeed);
-    }
+    } else if (isDeleting && charIndex > 0) {
     /*Erasing*/
-    else if (isDeleting && charIndex > 0){
-        aboutMeElement.textContent = currentText.substring(0, charIndex-1);
-        charIndex--;
-        setTimeout(type, eraseSpeed);
-    }
+      aboutMeElement.textContent = currentText.substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(type, eraseSpeed);
+    } else {
     /*Switching the deleting or typing process*/
-    else {
-        isDeleting = !isDeleting;
-        if(!isDeleting) {
-            textIndex = (textIndex + 1) % aboutMeTexts.length;
-        }
-        setTimeout(type, pauseTime);
+      isDeleting = !isDeleting;
+      if (!isDeleting) {
+        textIndex = (textIndex + 1) % aboutMeTexts.length;
+      }
+      setTimeout(type, pauseTime);
     }
   }
   type();
@@ -42,18 +42,40 @@ function changeAboutMeText() {
 //Call function to add stunning modification
 changeAboutMeText();
 
-
 /*-----------------------------Light/Dark Mode----------------*/
 
-document.addEventListener('DOMContentLoaded', function() {
-  const darkModeToggle = document.getElementById('dark-mode-toggle');
+document.addEventListener("DOMContentLoaded", function () {
+  const darkModeToggle = document.getElementById("dark-mode-toggle");
   const body = document.body;
 
-  darkModeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    const currentMode = body.classList.contains('dark-mode') ? 'Dark' : 'Light' ;
-    darkModeToggle.querySelector('i').classList.toggle('fa-sun');  //Change icon
-    darkModeToggle.querySelector('i').classList.toggle('fa-moon');  //Change icon
-    darkModeToggle.querySelector('i').toggle('light-mode');         //Change icon color
+  darkModeToggle.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+    const currentMode = body.classList.contains("dark-mode") ? "Dark" : "Light";
+    darkModeToggle.querySelector("i").classList.toggle("fa-sun"); //Change icon
+    darkModeToggle.querySelector("i").classList.toggle("fa-moon"); //Change icon
+    darkModeToggle.querySelector("i").toggle("light-mode"); //Change icon color
   });
 });
+
+/*---------------------Progress Bar-----------------*/
+document.addEventListener("DOMContentLoaded", function () {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const progressBar = entry.target.querySelector('.progress-bar');
+        const progress = progressBar.dataset.progress;
+        progressBar.style.setProperty('--progress', `${progress}%`); // Set custom property for progress
+        progressBar.classList.add("animated"); // Add a class to trigger animation
+        observer.unobserve(entry.target); // Stop observing after animation
+      }
+    });
+  });
+
+  const programmingLanguages = document.querySelectorAll('#programming-language .skill');
+  programmingLanguages.forEach(skill => {
+    observer.observe(skill); // Start observing each skill
+  });
+});
+
+
+

@@ -53,7 +53,6 @@ img {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-
 .email-icon {
   color: white;
   background-color: red;
@@ -78,8 +77,8 @@ img {
   /* animation: pulse 2s infinite alternate; */
 }
 
-.let{
-    margin-bottom: 24px;
+.let {
+  margin-bottom: 24px;
 }
 
 ol {
@@ -179,25 +178,63 @@ footer {
 }
 
 /*--------------------------------Mode Change------------------------*/
-.dark-mode-toggle{
+.dark-mode-toggle {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 4px;
 }
 
-.dark-mode{
+.dark-mode {
   background-color: #333;
   color: #fff;
 }
 
-.dark-mode button{
+.dark-mode button {
   background-color: #555;
   color: #fff;
 }
 
-.dark-mode p{
+.dark-mode p {
   color: #fff;
+}
+
+/*----------------------------Progress Bar----------------------*/
+#programming-language { 
+  margin-top: 50px;
+}
+
+#programming-language .skill {
+  margin-bottom: 20px;
+}
+
+#programming-language .progress-bar {
+  width: 0; /* Initial width */
+  height: 20px;
+  background: linear-gradient(to right, #831bcd, #f9620b);
+  border-radius: 10px;
+  position: relative;
+  transition: width 1s ease-in-out; /* Smooth transition for width change */
+  max-width: 50vw; /* Ensure progress bar takes up a max of 50% of the screen width */
+}
+
+/* When progress is set dynamically */
+#programming-language .progress-bar {
+  width: var(--progress, 0); /* Width is set dynamically based on --progress custom property */
+}
+
+#programming-language .animated {
+  animation: animateProgress 1s forwards; /* Apply animation when the animated class is added */
+}
+
+/* Animation keyframe: Animate progress from left to right */
+@keyframes animateProgress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--progress, 0); /* Animate the width to the value of --progress */
+  }
 }
 
 /*-------------------------Animation Keyframes------------------*/
@@ -265,7 +302,7 @@ footer {
     text-align: center;
   }
 
-  li{
+  li {
     width: 100%;
   }
 
@@ -276,7 +313,7 @@ footer {
   .email-icon {
     padding: 14px 16px;
   }
-  
+
   .linkedIn-icon {
     padding: 16px 18px;
   }
