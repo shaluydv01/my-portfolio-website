@@ -58,24 +58,35 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /*---------------------Progress Bar-----------------*/
-document.addEventListener("DOMContentLoaded", function () {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const progressBar = entry.target.querySelector('.progress-bar');
-        const progress = progressBar.dataset.progress;
-        progressBar.style.setProperty('--progress', `${progress}%`); // Set custom property for progress
-        progressBar.classList.add("animated"); // Add a class to trigger animation
-        observer.unobserve(entry.target); // Stop observing after animation
-      }
-    });
-  });
+const progressDiv = document.querySelector("#progress-div");
 
-  const programmingLanguages = document.querySelectorAll('#programming-language .skill');
-  programmingLanguages.forEach(skill => {
-    observer.observe(skill); // Start observing each skill
-  });
-});
+const progressBars = document.querySelectorAll(".progress-bar");
+
+function showProgress(){
+  progressBars.forEach(progressBar => {
+    const value = progressBar.dataset.progress;
+    progressBar.style.opacity = 1;
+    progressBar.style.width = `${value}%`;
+  })
+}
+
+function hideProgress(){
+  progressBars.forEach(p => {
+    p.style.opacity = 0;
+    p.style.width = 0;
+  })
+}
+
+window.addEventListener('scroll', () => {
+  const sectionPos = progressDiv.getBoundingClientRect().top;
+  const screenPos = window.innerHeight;
+
+  if(sectionPos < screenPos){
+    showProgress();
+  }else{
+    hideProgress();
+  }
+})
 
 
 

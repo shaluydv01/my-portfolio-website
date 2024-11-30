@@ -200,41 +200,40 @@ footer {
 }
 
 /*----------------------------Progress Bar----------------------*/
+#progress-div{
+  width: 50%;
+}
+
+#progress-div p{
+  display: flex;
+}
+
 #programming-language { 
   margin-top: 50px;
 }
 
-#programming-language .skill {
-  margin-bottom: 20px;
+.skill{
+  width: 100%;
+  height: 18px;
+  background: #cccccc;
+  border-radius: 10px;
+  display: flex;
 }
 
-#programming-language .progress-bar {
-  width: 0; /* Initial width */
-  height: 20px;
-  background: linear-gradient(to right, #831bcd, #f9620b);
+.progress-bar {
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, red, purple);
   border-radius: 10px;
   position: relative;
-  transition: width 1s ease-in-out; /* Smooth transition for width change */
-  max-width: 50vw; /* Ensure progress bar takes up a max of 50% of the screen width */
+  transition: all .5s;
 }
 
-/* When progress is set dynamically */
-#programming-language .progress-bar {
-  width: var(--progress, 0); /* Width is set dynamically based on --progress custom property */
-}
-
-#programming-language .animated {
-  animation: animateProgress 1s forwards; /* Apply animation when the animated class is added */
-}
-
-/* Animation keyframe: Animate progress from left to right */
-@keyframes animateProgress {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: var(--progress, 0); /* Animate the width to the value of --progress */
-  }
+.progress-bar span{
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
 }
 
 /*-------------------------Animation Keyframes------------------*/
