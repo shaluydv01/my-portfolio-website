@@ -18,15 +18,6 @@ p {
   font-weight: 400;
 }
 
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #0056b3;
-  text-decoration: underline;
-}
 
 hr {
   width: 50%;
@@ -46,10 +37,10 @@ section {
   /* text-align: center; */
 }
 
-img {
+#personal-img {
   border-radius: 50%;
   background-color: blue;
-  width: 250px;
+  width: 300px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -234,6 +225,44 @@ footer {
   top: 0;
   right: 0;
   color: white;
+}
+
+/*----------------------------Project Section--------------------------*/
+
+#project-section-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+}
+
+#project-section-div div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 1vw;
+  gap: 4px;
+  width: 25%;
+}
+
+#project-section-div div a{
+  padding: 4px 8px;
+  background: linear-gradient(to right, orangered, purple);
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+#project-section-div div a:hover{
+  transform: scale(1.1);
+  background: linear-gradient(to right, purple, orangered);
+}
+
+#project-section div img, video{
+  width: 300px;
+  height: 150px;
 }
 
 /*-------------------------Animation Keyframes------------------*/

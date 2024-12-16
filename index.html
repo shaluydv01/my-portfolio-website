@@ -23,7 +23,7 @@
       <section>
         <h2>About Me</h2>
         <p>Hello I'm Shalu, and here is a little info about me.</p>
-        <img src="assets\img\shalu-pic.webp" alt="Shalu's Pic" width="300" />
+        <img src="assets\img\shalu-pic.webp" alt="Shalu's Pic" id="personal-img" />
       </section>
       <hr />
 
@@ -144,14 +144,26 @@
       </section>
       <hr />
 
-      <section>
+      <section id="project-section">
         <h2>Portfolio</h2>
         <p>Take a look at some of my works.</p>
-        <p>
-          <a href="Project1/project1.html">myExpenses</a> |
-          <a href="Project2/project2.html">Calculator</a> |
-          <a href="Project3/index.html">Animated-Portfolio</a>
-        </p>
+        <div id="project-section-div">
+          <div>
+            <img src="assets\img\expensesImage.png"  alt="..." />
+            <p>This project is built on using "MERN" Stack. And still under development.</p>
+            <a href="Project1/project1.html">myExpenses</a>
+          </div> 
+          <div>
+            <img src="assets\img\Calculator.png" alt="..." />
+            <p>This project is built on using simply "HTML", "CSS" and "JavaScript".</p>
+            <a href="Project2/project2.html">Calculator</a>
+          </div> 
+          <div>
+            <video autoplay muted loop src="assets\animatedPortfolio.mp4" ></video>
+            <p>This project is built on using React.js and GSAP and Locomotive js is used.</p>
+            <a href="Project3/index.html">Animated-Portfolio</a>
+          </div>
+        </div>
       </section>
       <hr />
 
