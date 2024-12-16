@@ -383,4 +383,17 @@ footer {
   footer {
     height: 72px;
   }
+
+  #project-section-div{
+    flex-direction: column;
+  }
+
+  #project-section-div div{
+    width: 90%;
+    column-gap: 5%;
+  }
+
+  #project-section-div div img, video{
+    width: 100%;
+  }
 }
