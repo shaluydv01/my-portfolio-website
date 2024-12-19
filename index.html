@@ -13,17 +13,43 @@
     />
   </head>
   <body>
+    <nav>
+      <div id="logo">
+        <div id="logo-span">Shalu</div>
+        <div id="logo-span">Yadav</div>
+      </div>
+      <div id="nav-content">
+        <div id="nav-text">
+          <div id="close">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <div>Home</div>
+          <div>About</div>
+          <div>Projects</div>
+          <div>Contact</div>
+          <div id="dark-mode-toggle" class="dark-mode-toggle">
+            <i class="fas fa-moon"></i>
+          </div>
+        </div>
+      </div>
+      <div id="hamburger">
+        <i class="fa-solid fa-bars" id="ham"></i>
+      </div>
+    </nav>
     <center>
       <section class="top-welcome">
-        <h1>This is Shalu, a <span class="about-me"></span></h1>
-        <p>Welcome to my world !</p>
-      </section>
-      <hr />
-
-      <section>
-        <h2>About Me</h2>
-        <p>Hello I'm Shalu, and here is a little info about me.</p>
-        <img src="assets\img\shalu-pic.webp" alt="Shalu's Pic" id="personal-img" />
+        <img
+          src="assets\img\shalu-pic.webp"
+          alt="Shalu's Pic"
+          id="personal-img"
+        />
+        <h1>Hello, I'm Shalu Yadav, a <span class="about-me"></span></h1>
+        <p id="about-para">
+          Hello I'm Shalu Yadav a Full Stack Developer and a final year B.TECH student
+          in <em>Computer Science And Engineering.</em> I love to
+          explore new and upcoming challenges. I build responsive, robust web applications and 
+          seeking for an opportunity to turn my enthusiast into my passion.
+        </p>
       </section>
       <hr />
 
@@ -149,18 +175,32 @@
         <p>Take a look at some of my works.</p>
         <div id="project-section-div">
           <div>
-            <img src="assets\img\expensesImage.png"  alt="..." />
-            <p>This project is built on using "MERN" Stack. And still under development.</p>
+            <img src="assets\img\expensesImage.png" alt="..." />
+            <p>
+              This project is built on using "MERN" Stack. And still under
+              development.
+            </p>
             <a href="Project1/project1.html">myExpenses</a>
-          </div> 
+          </div>
           <div>
             <img src="assets\img\Calculator.png" alt="..." />
-            <p>This project is built on using simply "HTML", "CSS" and "JavaScript".</p>
+            <p>
+              This project is built on using simply "HTML", "CSS" and
+              "JavaScript".
+            </p>
             <a href="Project2/project2.html">Calculator</a>
-          </div> 
+          </div>
           <div>
-            <video autoplay muted loop src="assets\animatedPortfolio.mp4" ></video>
-            <p>This project is built on using React.js and GSAP and Locomotive js is used.</p>
+            <video
+              autoplay
+              muted
+              loop
+              src="assets\animatedPortfolio.mp4"
+            ></video>
+            <p>
+              This project is built on using React.js and GSAP and Locomotive js
+              is used.
+            </p>
             <a href="Project3/index.html">Animated-Portfolio</a>
           </div>
         </div>
@@ -211,10 +251,6 @@
         <p>&copy; 2024 Shalu. Built by Shalu Yadav.</p>
       </footer>
     </center>
-
-    <div id="dark-mode-toggle" class="dark-mode-toggle">
-      <i class = "fas fa-moon"
-    </div>
   </body>
 
   <script src="script.js"></script>

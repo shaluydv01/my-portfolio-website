@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const currentMode = body.classList.contains("dark-mode") ? "Dark" : "Light";
     darkModeToggle.querySelector("i").classList.toggle("fa-sun"); //Change icon
     darkModeToggle.querySelector("i").classList.toggle("fa-moon"); //Change icon
-    darkModeToggle.querySelector("i").toggle("light-mode"); //Change icon color
+    darkModeToggle.querySelector("i").classList.toggle("light-mode"); //Change icon color
   });
 });
 
@@ -88,5 +88,37 @@ window.addEventListener('scroll', () => {
   }
 })
 
+/*---------------------------Navbar color mode change--------------*/
+
+const nav = document.querySelector("nav");
+const body = document.querySelector("body");
+
+body.addEventListener("click", ()=>{
+  nav.style.backgroundColor = "";
+})
+
+window.onscroll = function(){
+  nav.style.backgroundColor = "#b3b3ff";
+}
+
+window.onscrollend = function(){
+  nav.style.backgroundColor = "#f2f2f2"
+}
 
 
+/*-----------------------Hamburger open close-----------------*/
+
+const hamburger = document.querySelector("#hamburger");
+const navContent = document.querySelector("#nav-content");
+const close = document.querySelector("#close");
+
+hamburger.addEventListener("click", ()=>{
+  navContent.style.display = "flex";
+  close.style.display = "flex";
+  hamburger.style.display = "none"
+})
+
+close.addEventListener("click", ()=>{
+  navContent.style.display = "none";
+  hamburger.style.display = "flex";
+})
