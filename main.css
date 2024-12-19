@@ -13,6 +13,8 @@ body {
 
 section{
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 nav{
@@ -79,20 +81,15 @@ hr {
 .top-welcome {
   background: linear-gradient(to top, rgb(60, 60, 205), orangered);
   color: white;
-  padding-top: 16px;
+  padding: 16px;
   text-align: center;
   margin-top: 74px;
   width: 100%;
 }
 
 #about-para{
-  width: 75%;
+  width: 100%;
   padding: 0 15%;
-}
-
-section {
-  padding: 8px;
-  /* text-align: center; */
 }
 
 #personal-img {
@@ -490,6 +487,7 @@ footer {
 
   footer {
     height: 72px;
+    width: 100%;
   }
 
   #project-section-div{
