@@ -47,6 +47,7 @@ changeAboutMeText();
 document.addEventListener("DOMContentLoaded", function () {
   const darkModeToggle = document.getElementById("dark-mode-toggle");
   const body = document.body;
+  const navbar = document.querySelector("nav")
 
   darkModeToggle.addEventListener("click", () => {
     body.classList.toggle("dark-mode");

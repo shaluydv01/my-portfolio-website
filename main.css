@@ -19,6 +19,7 @@ nav{
   left: 0;
   background: transparent;
   width: 100%;
+  padding: 19px 0;
 }
 
 #logo{
@@ -241,6 +242,10 @@ footer {
   color: #fff;
 }
 
+.dark-mode nav{
+  color: black;
+}
+
 /*----------------------------Progress Bar----------------------*/
 #progress-div{
   width: 50%;
@@ -372,7 +377,6 @@ footer {
 @media only screen and (max-width: 662px) {
   nav{
     margin: 0;
-    padding: 19px 0;
   }
 
   #logo{
